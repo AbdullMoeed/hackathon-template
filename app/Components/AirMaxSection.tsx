@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import "swiper/css"; // Swiper CSS is required
 import "swiper/css/navigation"; // Optional: Add more if needed
+import { Swiper as SwiperInstance } from "swiper/types"; // Import Swiper types
 
 // Dynamically import Swiper and SwiperSlide
 const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
@@ -41,7 +42,7 @@ const AirMaxSection: React.FC = () => {
 
   const handlePrev = () => {
     if (typeof window !== "undefined") {
-      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: any };
+      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: SwiperInstance };
       if (swiperElement?.swiper) {
         swiperElement.swiper.slidePrev();
       }
@@ -50,7 +51,7 @@ const AirMaxSection: React.FC = () => {
 
   const handleNext = () => {
     if (typeof window !== "undefined") {
-      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: any };
+      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: SwiperInstance };
       if (swiperElement?.swiper) {
         swiperElement.swiper.slideNext();
       }
