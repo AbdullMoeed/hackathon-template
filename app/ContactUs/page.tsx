@@ -18,8 +18,8 @@ const ContactUs = () => {
           <h3 className="text-lg font-medium mb-2">WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?</h3>
           <p>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:</p>
           <p>Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</p>
-          <p>If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM or a local credit or debit card.</p>
-          <p>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you're not already a Member, join us today.</p>
+          <p>If you enter your PAN information at checkout, you will be able to pay for your order with PayTM or a local credit or debit card.</p>
+          <p>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you re not already a Member, join us today.</p>
         </div>
 
         <div>
@@ -34,7 +34,7 @@ const ContactUs = () => {
           </div>
           <div className="flex items-center space-x-4 mb-2">
             <FaEnvelope className="text-blue-500" />
-            <p>We'll reply within 1 business day</p>
+            <p>We will reply within 1 business day</p>
           </div>
           <div className="flex items-center space-x-4">
             <FaMapMarkerAlt className="text-blue-500" />

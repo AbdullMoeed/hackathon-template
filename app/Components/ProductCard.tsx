@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProductCardProps {
   image: string;
@@ -13,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, name, category, price,
   return (
     <Link href="/ProductNavigate"><div className="border rounded-lg shadow-sm hover:shadow-md transition p-4">
       
-      <img
+      <Image
         src={image}
         alt={name}
         className="w-full h-48 object-cover rounded-md mb-4"

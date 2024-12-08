@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Importing arrows from React Lucide
+import Image from "next/image";
 
 const GearUp = () => {
   const menSwiperRef = useRef(null); // Reference for men's swiper
@@ -96,7 +97,7 @@ const GearUp = () => {
             {menItems.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="card">
-                  <img src={item.image} alt={item.title} />
+                  <Image src={item.image} alt={item.title} />
                   <h3>{item.title}</h3>
                   <p>{item.category}</p>
                   <p className="price">{item.price}</p>
@@ -127,7 +128,7 @@ const GearUp = () => {
             {womenItems.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="card">
-                  <img src={item.image} alt={item.title} />
+                  <Image src={item.image} alt={item.title} />
                   <h3>{item.title}</h3>
                   <p>{item.category}</p>
                   <p className="price">{item.price}</p>

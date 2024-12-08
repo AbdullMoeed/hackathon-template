@@ -245,7 +245,7 @@ function Navbar() {
         {/* Center */}
         <button className="text-gray-600 text-xs font-bold">Skip to main content</button>
         {/* Right */}
-        <div className="flex gap-3 text-gray-600 text-sm hidden sm:flex">
+        <div className="flex gap-3 text-gray-600 text-sm  sm:flex">
           <Link href="/FindStore" className="hover:underline">
             Find a Store
           </Link>
@@ -272,7 +272,7 @@ function Navbar() {
         </div>
 
         {/* Center Links */}
-        <ul className="flex space-x-8 text-sm font-medium hidden md:flex">
+        <ul className="flex space-x-8 text-sm font-medium  md:flex">
           <li>
             <Link href="/Products" className="hover:underline">
               New & Featured

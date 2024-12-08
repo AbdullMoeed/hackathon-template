@@ -1,5 +1,5 @@
 import { Phone, MessageSquare, Mail, MapPin } from 'lucide-react'
-
+import Navbar from '../Navbar/Navbar'
 export default function Help() {
   return (
     <>
@@ -14,21 +14,21 @@ export default function Help() {
         
         <div className="space-y-6">
           <p className="text-gray-700">
-            We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:
+            We want to make buying your favourite Nike shoes and gear online fast and easy and we accept the following payment options
           </p>
           
           <p className="text-gray-700">
-            Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro
+            Visa Mastercard Diners Club Discover American Express Visa Electron Maestro
           </p>
           
           <p className="text-gray-700">
-            If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM or a local credit or debit card.
+            If you enter your PAN information at checkout you will be able to pay for your order with PayTM or a local credit or debit card.
           </p>
           
           <p className="text-gray-700">Apple Pay</p>
           
           <p className="text-gray-700">
-            <span className="font-medium">Nike Members</span> can store multiple debit or credit cards in their profile for faster checkout. If you're not already a Member,{' '}
+            <span className="font-medium">Nike Members</span> can store multiple debit or credit cards in their profile for faster checkout. If you re not already a Member{' '}
             <a href="#" className="underline">
               join us
             </a>{' '}
@@ -51,17 +51,17 @@ export default function Help() {
               <div>
                 <h3 className="font-medium mb-2">Does my card need international purchases enabled?</h3>
                 <p className="text-gray-700">
-                  Yes, we recommend asking your bank to enable international purchases on your card. You will be notified at checkout if international purchases need to be enabled.
+                  Yes we recommend asking your bank to enable international purchases on your card. You will be notified at checkout if international purchases need to be enabled.
                 </p>
                 <p className="text-gray-700 mt-2">
-                  Please note, some banks may charge a small transaction fee for international orders.
+                  Please note some banks may charge a small transaction fee for international orders.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-medium mb-2">Can I pay for my order with multiple methods?</h3>
                 <p className="text-gray-700">
-                  No, payment for Nike orders can't be split between multiple payment methods.
+                  No payment for Nike orders cant be split between multiple payment methods.
                 </p>
               </div>
 
@@ -73,9 +73,9 @@ export default function Help() {
               </div>
 
               <div>
-                <h3 className="font-medium mb-2">Why don't I see Apple Pay as an option?</h3>
+                <h3 className="font-medium mb-2">Why dont I see Apple Pay as an option?</h3>
                 <p className="text-gray-700">
-                  To see Apple Pay as an option in the Nike App or on Nike.com, you'll need to use a compatible Apple device running the latest OS, be signed in to your iCloud account and have a supported card in your Wallet. Additionally, you'll need to use Safari to use Apple Pay on Nike.com.
+                  To see Apple Pay as an option in the Nike App or on Nike.com you will need to use a compatible Apple device running the latest OS be signed in to your iCloud account and have a supported card in your Wallet. Additionally youll need to use Safari to use Apple Pay on Nike.com.
                 </p>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function Help() {
             <h3 className="text-sm text-gray-500 mb-2">RELATED</h3>
             <div className="space-y-2">
               <a href="#" className="block text-sm underline">
-                WHAT ARE NIKE'S DELIVERY OPTIONS?
+                WHAT ARE NIKES DELIVERY OPTIONS?
               </a>
               <a href="#" className="block text-sm underline">
                 HOW DO I GET FREE DELIVERY ON NIKE ORDERS?
@@ -117,7 +117,7 @@ export default function Help() {
             <div>
               <p className="font-medium">000 800 919 0566</p>
               <p className="text-sm text-gray-600">
-                Products & Orders: 24 hours a day,
+                Products & Orders: 24 hours a day
                 <br />7 days a week
               </p>
               <p className="text-sm text-gray-600 mt-2">
@@ -141,7 +141,7 @@ export default function Help() {
             <Mail className="w-6 h-6" />
             <div>
               <p className="text-sm text-gray-600">
-                We'll reply within
+                We will reply within
                 <br />five business days
               </p>
             </div>

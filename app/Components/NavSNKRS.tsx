@@ -1,6 +1,7 @@
 import React from "react";
 import { ShoppingCart, HelpCircle, Globe, Menu } from "lucide-react"
 import Link from "next/link";
+import Image from "next/image";
 
 const NavSNKRS = () => {
   return (
@@ -8,7 +9,7 @@ const NavSNKRS = () => {
       {/* Left Section */}
       <div className="flex items-center">
         <a href="#" className="flex items-center">
-          <img
+          <Image
             src="/images/snkrs-logo.PNG" // Replace with your Nike logo path
             alt="Nike Logo"
             className="ml-[30%] w-8 h-8"

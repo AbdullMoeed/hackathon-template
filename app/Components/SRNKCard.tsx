@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from './Button'
+import Image from 'next/image'
 
 interface ProductCardProps {
   image: string
@@ -19,7 +20,7 @@ export function SRNKCard                                                        
   return (
     <div className="group flex flex-col h-full">
       <div className={`relative aspect-square overflow-hidden ${imageClassName}`}>
-        <img
+        <Image
           src={image}
           alt={title || "Product image"}
           className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
-
+import Image from 'next/image';
 const Login = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const Login = () => {
     <div className="w-full max-w-md mx-auto mt-20">
       <div className="bg-white shadow-lg rounded-lg px-8 py-10">
         <div className="text-center mb-6">
-          <img src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto" />
+          <Image src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto" />
           <h2 className="text-2xl font-bold mt-4">YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
         </div>
         <form>

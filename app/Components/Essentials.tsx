@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // components/Essentials.js
 export default function Essentials() {
     return (
@@ -6,37 +8,37 @@ export default function Essentials() {
           The Essentials
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Men's Section */}
+          {/* Mens Section */}
           <div className="relative group">
-            <img
+            <Image
               src="/Images/essentials1.png" // Replace with the image URL for Men's
               alt="Men's Section"
               className="w-full h-auto rounded-md"
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
-              Men's
+              Mens
             </button>
           </div>
-          {/* Women's Section */}
+          {/* Womens Section */}
           <div className="relative group">
-            <img
+            <Image
               src="/Images/essentials2.png" // Replace with the image URL for Women's
-              alt="Women's Section"
+              alt="Womens Section"
               className="w-full h-auto rounded-md"
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
-              Women's
+              Womens
             </button>
           </div>
-          {/* Kids' Section */}
+          {/* Kids Section */}
           <div className="relative group">
-            <img
+            <Image
               src="/Images/essentials3.png" // Replace with the image URL for Kids'
-              alt="Kids' Section"
+              alt="Kids Section"
               className="w-full h-auto rounded-md"
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
-              Kids'
+              Kids
             </button>
           </div>
         </div>
@@ -65,17 +67,17 @@ export default function Essentials() {
             <ul>
               <li>All Clothing</li>
               <li>Modest Wear</li>
-              <li>Hoodies & Pullovers</li>
-              <li>Shirts & Tops</li>
+              <li>Hoodies  Pullovers</li>
+              <li>Shirts  Tops</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-2">Kids'</h3>
+            <h3 className="font-bold mb-2">Kids</h3>
             <ul>
               <li>Infant & Toddler Shoes</li>
-              <li>Kids' Shoes</li>
-              <li>Kids' Jordan Shoes</li>
-              <li>Kids' Basketball Shoes</li>
+              <li>Kids Shoes</li>
+              <li>Kids Jordan Shoes</li>
+              <li>Kids Basketball Shoes</li>
             </ul>
           </div>
         </div>

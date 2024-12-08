@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import Image from "next/image";
 
 const FindStore = () => {
   return (
@@ -62,7 +63,7 @@ const FindStore = () => {
 
       {/* Right Section: Map */}
       <div className="flex-1 relative">
-        <img
+        <Image
           src="/Images/map-img.png" // Replace with your map image path
           alt="Map"
           className="w-full h-full object-cover"
