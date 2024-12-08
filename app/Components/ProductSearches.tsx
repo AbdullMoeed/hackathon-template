@@ -1,33 +1,37 @@
-import ProductList from "./ProductGrid";
+import React from 'react';
+import ProductGrid from './ProductGrid';
 
 const products = [
-    {
-      id: 1,
-      name: 'Product 1',
-      price: 49.99,
-      imageUrl: '/Imanges/product1.png'
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: 29.99,
-      imageUrl: '/Imanges/product2.png'
-    },
-    {
-        id: 3,
-        name: 'Product 3',
-        price: 76.99,
-        imageUrl: '/Imanges/product3.png'
-      },
-    // Add more products as needed
-  ];
+  {
+    heading: 'Best Seller',
+    title: 'Product 1',
+    category: 'Category 1',
+    color: 'Red',
+    price: 49.99,
+  },
+  {
+    heading: 'New Arrival',
+    title: 'Product 2',
+    category: 'Category 2',
+    color: 'Blue',
+    price: 29.99,
+  },
+  {
+    heading: 'Discounted',
+    title: 'Product 3',
+    category: 'Category 3',
+    color: 'Green',
+    price: 76.99,
+  },
+  // Add more products as needed
+];
 
 function ProductSearches() {
   return (
     <div>
-        <ProductList products={products} />
+      <ProductGrid products={products} />
     </div>
-  )
+  );
 }
 
-export default ProductSearches
+export default ProductSearches;
