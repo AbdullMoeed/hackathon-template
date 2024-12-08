@@ -189,7 +189,7 @@
 
 'use client';
 
-import { ChevronDown, Heart, ShoppingCart, Search, Menu } from 'lucide-react';
+import { Heart, ShoppingCart, Search, Menu } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
