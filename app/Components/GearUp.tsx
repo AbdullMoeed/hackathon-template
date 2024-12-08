@@ -7,10 +7,11 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import type { Swiper as SwiperInstance } from "swiper";
 
 const GearUp: React.FC = () => {
-  const menSwiperRef = useRef<any>(null);
-  const womenSwiperRef = useRef<any>(null);
+  const menSwiperRef = useRef<SwiperInstance | null>(null);
+  const womenSwiperRef = useRef<SwiperInstance | null>(null);
 
   const menItems = [
     {
@@ -42,11 +43,11 @@ const GearUp: React.FC = () => {
     },
   ];
 
-  const handlePrev = (swiperRef: React.MutableRefObject<any>) => {
+  const handlePrev = (swiperRef: React.MutableRefObject<SwiperInstance | null>) => {
     swiperRef.current?.slidePrev();
   };
 
-  const handleNext = (swiperRef: React.MutableRefObject<any>) => {
+  const handleNext = (swiperRef: React.MutableRefObject<SwiperInstance | null>) => {
     swiperRef.current?.slideNext();
   };
 
