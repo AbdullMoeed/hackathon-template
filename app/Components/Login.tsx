@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 const Login = () => {
   return (
     <>
@@ -9,7 +10,10 @@ const Login = () => {
     <div className="w-full max-w-md mx-auto mt-20">
       <div className="bg-white shadow-lg rounded-lg px-8 py-10">
         <div className="text-center mb-6">
-          <Image src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto" />
+          <Image src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto" 
+          width={100}
+          height={100}
+          />
           <h2 className="text-2xl font-bold mt-4">YOUR ACCOUNT FOR EVERYTHING NIKE</h2>
         </div>
         <form>
@@ -65,9 +69,9 @@ const Login = () => {
         <div className="text-center mt-6">
           <p className="text-gray-700 font-medium">
             Not a Member?{' '}
-            <a href="#" className="text-indigo-600 font-bold hover:text-indigo-800">
+            <Link href="JoinUs" className="text-indigo-600 font-bold hover:text-indigo-800">
               Join Us.
-            </a>
+            </Link>
           </p>
         </div>
       </div>

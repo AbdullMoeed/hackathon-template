@@ -16,6 +16,8 @@ const ProductCard = () => {
           src="/Images/pcard3.png" // Replace with your image path
           alt="Nike Air Force 1"
           className="w-[653] h-[653] max-w-sm"
+          width={450}
+          height={450}
         />
       </div>
 

@@ -2,7 +2,7 @@
 import { Minus } from "lucide-react"
 import Image from "next/image"
 import AirMaxSection from "../Components/AirMaxSection"
-import GearUp from "../Components/GearUp";
+import { GearUp } from "../Components/GearUp";
 import Essentials from "../Components/Essentials";
 import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
@@ -45,11 +45,11 @@ function Hero() {
         </div>
 
         {/* Button */}
-        <div className="flex gap-3 items-center text-sm justify-center mt-[2%]">
+        <div className="flex gap-3 items-center text-sm justify-center mt-[2%] mb-[10%]">
           <button className="bg-black text-white rounded-full w-[67] h-[24] p-2">
             Notify Me
           </button>
-          <Link href="/Login/login"><button className="bg-black text-white rounded-full w-[168] h-[39] p-2">
+          <Link href="/Products"><button className="bg-black text-white rounded-full w-[168] h-[39] p-2">
             Shop Air Max
           </button></Link>
         </div>
@@ -117,9 +117,11 @@ function Hero() {
 
         {/* Button */}
         <div className=" ml-[45%] text-sm mt-[2%]">
+          <Link href="/Login">
           <button className="bg-black text-white rounded-full w-[100] h-[39] px-4 py-2">
             Sign Up
           </button>
+          </Link>
         </div>
       </div>
       <div className="ml-[4%] mr-[4%]">

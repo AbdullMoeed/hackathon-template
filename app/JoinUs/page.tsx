@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const JoinUs = () => {
   return (
@@ -8,7 +9,10 @@ const JoinUs = () => {
     <div className="w-full max-w-md mx-auto mt-20">
       <div className="bg-white shadow-lg rounded-lg px-8 py-10">
         <div className="text-center mb-6">
-          <Image src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto" />
+          <Image src="/Images/jordan-logo.PNG" alt="Nike Logo" className="w-24 mx-auto"  
+          width={100}
+          height={100}
+          />
           <h2 className="text-2xl font-bold mt-4">BECOME A NIKE MEMBER</h2>
           <p className="text-[#8D8D8D] mt-2">
             Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.
@@ -117,9 +121,9 @@ const JoinUs = () => {
         <div className="text-center mt-6">
           <p className="text-[#8D8D8D] font-medium">
             Already a Member?{' '}
-            <a href="#" className="text-black font-bold hover:text-gray-800">
+            <Link href="/Login" className="text-black font-bold hover:text-gray-800">
               Sign in.
-            </a>
+            </Link>
           </p>
         </div>
       </div>

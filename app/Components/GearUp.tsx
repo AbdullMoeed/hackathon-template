@@ -1,177 +1,79 @@
-'use client';
+import { ProductCarousel } from "./ProductCarousel"
 
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
-import type { Swiper as SwiperInstance } from "swiper";
+const mensProducts = [
+  {
+    id: 1,
+    name: "Nike Dri-FIT ADV TechKnit Ultra",
+    description: "Men's Short-Sleeve Running Top",
+    price: 3895,
+    image: "/Images/men-tshirt.png",
+  },
+  {
+    id: 2,
+    name: "Nike Dri-FIT Challenger",
+    description: "Men's 18cm (approx.) 2-in-1 Versatile Shorts",
+    price: 2495,
+    image: "/Images/men-shorts.png",
+  },
+  {
+    id: 3,
+    name: "Nike Dri-FIT ADV TechKnit Ultra",
+    description: "Men's Long-Sleeve Running Top",
+    price: 4295,
+    image: "/Images/men-tshirt.png",
+  },
+  {
+    id: 4,
+    name: "Nike Dri-FIT Challenger",
+    description: "Men's 20cm (approx.) Versatile Shorts",
+    price: 2695,
+    image: "/Images/men-shorts.png",
+  },
+]
 
-const GearUp: React.FC = () => {
-  const menSwiperRef = useRef<SwiperInstance | null>(null);
-  const womenSwiperRef = useRef<SwiperInstance | null>(null);
+const womensProducts = [
+  {
+    id: 1,
+    name: "Nike Dri-FIT ADV Run Division",
+    description: "Women's Long-Sleeve Running Top",
+    price: 5295,
+    image: "/Images/women-tshirt.png",
+  },
+  {
+    id: 2,
+    name: "Nike Fast",
+    description: "Women's Mid-Rise 7/8 Running Leggings with Pockets",
+    price: 3795,
+    image: "/Images/women-trouser.png",
+  },
+  {
+    id: 3,
+    name: "Nike Dri-FIT ADV Run Division",
+    description: "Women's Short-Sleeve Running Top",
+    price: 4795,
+    image: "/Images/women-tshirt.png",
+  },
+  {
+    id: 4,
+    name: "Nike Epic Fast",
+    description: "Women's Mid-Rise Running Leggings",
+    price: 3995,
+    image: "/Images/women-trouser.png",
+  },
+]
 
-  const menItems = [
-    {
-      image: "/Images/men-tshirt.png",
-      title: "Nike Dri-FIT ADV TechKnit Ultra",
-      category: "Men's Short-Sleeve Running Top",
-      price: "₹ 3,895",
-    },
-    {
-      image: "/Images/men-shorts.png",
-      title: "Nike Dri-FIT Challenger",
-      category: "Men's 2-in-1 Versatile Shorts",
-      price: "₹ 2,495",
-    },
-  ];
-
-  const womenItems = [
-    {
-      image: "/Images/women-tshirt.png",
-      title: "Nike Dri-FIT ADV Run Division",
-      category: "Women's Long-Sleeve Running Top",
-      price: "₹ 5,295",
-    },
-    {
-      image: "/Images/women-trouser.png",
-      title: "Nike Fast",
-      category: "Women's 7/8 Running Leggings with Pockets",
-      price: "₹ 3,795",
-    },
-  ];
-
-  const handlePrev = (swiperRef: React.MutableRefObject<SwiperInstance | null>) => {
-    swiperRef.current?.slidePrev();
-  };
-
-  const handleNext = (swiperRef: React.MutableRefObject<SwiperInstance | null>) => {
-    swiperRef.current?.slideNext();
-  };
-
+export function GearUp() {
   return (
-    <div className="airmax-section">
-      <div className="header">
-        <h2>Gear Up for the Best</h2>
+    <section className="py-12 px-4 md:px-6">
+      <h1 className="text-2xl font-bold mb-8">Gear Up</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ProductCarousel title="Men's" products={mensProducts} className="md:pr-4" />
+        <ProductCarousel title="Women's" products={womensProducts} className="md:pl-4" />
       </div>
+    </section>
+  )
+}
 
-      <div className="items-container">
-        {/* Men Section */}
-        <div className="section men-section">
-          <div className="arrows flex gap-2 mb-4">
-            <button
-              className="arrow"
-              onClick={() => handlePrev(menSwiperRef)}
-            >
-              <ChevronLeft size={20} color="white" />
-            </button>
-            <button
-              className="arrow"
-              onClick={() => handleNext(menSwiperRef)}
-            >
-              <ChevronRight size={20} color="white" />
-            </button>
-          </div>
-          <Swiper
-            onSwiper={(swiper) => (menSwiperRef.current = swiper)}
-            slidesPerView={2}
-            spaceBetween={20}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            {menItems.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="card">
-                  <Image src={item.image} alt={item.title} width={300} height={300} />
-                  <h3>{item.title}</h3>
-                  <p>{item.category}</p>
-                  <p className="price">{item.price}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
 
-        {/* Women Section */}
-        <div className="section women-section">
-          <div className="arrows flex gap-2 mb-4">
-            <button
-              className="arrow"
-              onClick={() => handlePrev(womenSwiperRef)}
-            >
-              <ChevronLeft size={20} color="white" />
-            </button>
-            <button
-              className="arrow"
-              onClick={() => handleNext(womenSwiperRef)}
-            >
-              <ChevronRight size={20} color="white" />
-            </button>
-          </div>
-          <Swiper
-            onSwiper={(swiper) => (womenSwiperRef.current = swiper)}
-            slidesPerView={2}
-            spaceBetween={20}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            {womenItems.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="card">
-                  <Image src={item.image} alt={item.title} width={300} height={300} />
-                  <h3>{item.title}</h3>
-                  <p>{item.category}</p>
-                  <p className="price">{item.price}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
 
-      <style jsx>{`
-        .airmax-section {
-          padding: 20px;
-        }
-        .header h2 {
-          font-size: 1.5rem;
-        }
-        .arrows {
-          display: flex;
-        }
-        .arrow {
-          background-color: #f5f5f5;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-        .arrow:hover {
-          background-color: darkgray;
-        }
-        .items-container {
-          display: flex;
-          justify-content: space-between;
-        }
-        .section {
-          width: 48%;
-        }
-        .card {
-          text-align: center;
-          padding: 15px;
-        }
-        .price {
-          color: #ff0000;
-          font-weight: bold;
-        }
-      `}</style>
-    </div>
-  );
-};
 
-export default GearUp;

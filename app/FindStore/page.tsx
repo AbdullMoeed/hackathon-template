@@ -6,7 +6,7 @@ const FindStore = () => {
   return (
     <>
     <Navbar />
-    <div className="flex flex-col md:flex-row h-screen max-w-screen-xl mx-auto">
+    <div className="flex flex-col md:flex-row h-screen max-w-screen-xl mx-auto mb-[20%]">
       {/* Left Section: Store List and Filter */}
       <div className="w-full md:w-1/3 bg-white p-6 border-r border-gray-200">
         {/* Title */}
@@ -66,6 +66,8 @@ const FindStore = () => {
         <Image
           src="/Images/map-img.png" // Replace with your map image path
           alt="Map"
+          width={400}
+          height={400}
           className="w-full h-full object-cover"
         />
       </div>

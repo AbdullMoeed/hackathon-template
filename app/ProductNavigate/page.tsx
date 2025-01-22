@@ -1,11 +1,11 @@
-import CardClick from "../Components/CardClick"
+// import CardClick from "../Components/CardClick"
 
-function page() {
-  return (
-    <div>
-        <CardClick />
-    </div>
-  )
-}
+// function page() {
+//   return (
+//     <div>
+//         <CardClick />
+//     </div>
+//   )
+// }
 
-export default page
+// export default page

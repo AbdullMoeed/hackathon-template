@@ -2,11 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import NavSNKRS from './NavSNKRS'
 
-const Incoming = () => {
+const Upcoming = () => {
   return (
     <>
     <NavSNKRS />
-    <div className='grid grid-cols-2 items-center justify-center px-5 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+    <div className='grid grid-cols-12 justify-center gap-2 space-x-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
         <Image src="/Images/pcard1.png" alt='pcard' width={140} height={70} />
         <Image src="/Images/pcard2.png" alt='pcard' width={140} height={70} />
         <Image src="/Images/pcard11.png" alt='pcard' width={140} height={70} />
@@ -31,4 +31,4 @@ const Incoming = () => {
   )
 }
 
-export default Incoming
+export default Upcoming

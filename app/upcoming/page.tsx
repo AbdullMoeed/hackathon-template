@@ -1,10 +1,10 @@
 import React from 'react'
-import Incoming from '../Components/Incoming'
+import Upcoming from '../Components/Upcoming'
 
 const page = () => {
   return (
     <div>
-        <Incoming/>
+        <Upcoming/>
     </div>
   )
 }

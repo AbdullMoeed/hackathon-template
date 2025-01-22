@@ -14,6 +14,8 @@ export default function Essentials() {
               src="/Images/essentials1.png" // Replace with the image URL for Men's
               alt="Men's Section"
               className="w-full h-auto rounded-md"
+              width={100} 
+              height={100}
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
               Mens
@@ -24,6 +26,8 @@ export default function Essentials() {
             <Image
               src="/Images/essentials2.png" // Replace with the image URL for Women's
               alt="Womens Section"
+              width={100} 
+              height={100}
               className="w-full h-auto rounded-md"
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
@@ -35,6 +39,8 @@ export default function Essentials() {
             <Image
               src="/Images/essentials3.png" // Replace with the image URL for Kids'
               alt="Kids Section"
+              width={100} 
+              height={100}
               className="w-full h-auto rounded-md"
             />
             <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">

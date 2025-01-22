@@ -1,107 +1,99 @@
-'use client';
 
-import React from "react";
-import dynamic from "next/dynamic";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
-import "swiper/css"; // Swiper CSS is required
-import "swiper/css/navigation"; // Optional: Add more if needed
-import { Swiper as SwiperInstance } from "swiper/types"; // Import Swiper types
+'use client'
 
-// Dynamically import Swiper and SwiperSlide
-const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), { ssr: false });
-const SwiperSlide = dynamic(() => import("swiper/react").then((mod) => mod.SwiperSlide), { ssr: false });
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ProductCardAirMax } from './ProductCardAirMax'
+import { useRef, useState } from "react"
 
-const AirMaxSection: React.FC = () => {
-  const items = [
-    {
-      image: "/Images/shoe1.png",
-      title: "Nike Air Max Pulse",
-      category: "Womens Shoes",
-      price: "₹ 13,995",
-    },
-    {
-      image: "/Images/shoe2.png",
-      title: "Nike Air Max Pulse",
-      category: "Mens Shoes",
-      price: "₹ 13,995",
-    },
-    {
-      image: "/Images/shoe3.png",
-      title: "Nike Air Max 97 SE",
-      category: "Mens Shoes",
-      price: "₹ 16,995",
-    },
-    {
-      image: "/Images/shoe1.png",
-      title: "Nike Air Max Pulse",
-      category: "Womens Shoes",
-      price: "₹ 13,995",
-    },
-  ];
+const products = [
+  {
+    name: "Nike Air Max Pulse",
+    category: "Women's Shoes",
+    price: "13,995",
+    imageUrl: "/Images/shoe1.png"
+  },
+  {
+    name: "Nike Air Max Pulse",
+    category: "Men's Shoes",
+    price: "13,995",
+    imageUrl: "/Images/shoe2.png"
+  },
+  {
+    name: "Nike Air Max 97 SE",
+    category: "Men's Shoes",
+    price: "16,995",
+    imageUrl: "/Images/shoe3.png"
+  },
+  {
+    name: "Nike Air Max 90",
+    category: "Women's Shoes",
+    price: "12,995",
+    imageUrl: "/Images/shoe2.png"
+  }
+]
 
-  const handlePrev = () => {
-    if (typeof window !== "undefined") {
-      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: SwiperInstance };
-      if (swiperElement?.swiper) {
-        swiperElement.swiper.slidePrev();
-      }
+export default function AirMaxSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
+      setCanScrollLeft(scrollLeft > 0)
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
     }
-  };
+  }
 
-  const handleNext = () => {
-    if (typeof window !== "undefined") {
-      const swiperElement = document.querySelector(".swiper") as HTMLElement & { swiper: SwiperInstance };
-      if (swiperElement?.swiper) {
-        swiperElement.swiper.slideNext();
-      }
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300
+      const newScrollLeft = scrollContainerRef.current.scrollLeft + 
+        (direction === 'left' ? -scrollAmount : scrollAmount)
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      })
     }
-  };
+  }
 
   return (
-    <div className="airmax-section">
-      {/* Header Section */}
-      <div className="header flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-900">Best of Air Max</h2>
-        <div className="arrows flex gap-4">
-          <button
-            className="arrow bg-gray-800 text-white p-2 rounded-full"
-            onClick={handlePrev}
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            className="arrow bg-gray-800 text-white p-2 rounded-full"
-            onClick={handleNext}
-            aria-label="Next Slide"
-          >
-            <ChevronRight size={20} />
-          </button>
+    <div className="w-full max-w-7xl mx-auto px-4 mb-[10%]">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold ">Best of Air Max</h2>
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-medium">Shop</span>
+          <div className="flex gap-2">
+            <button
+              onClick={() => scroll('left')}
+              disabled={!canScrollLeft}
+              className="w-8 h-8 flex items-center justify-center rounded-full border bg-background disabled:opacity-50"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              disabled={!canScrollRight}
+              className="w-8 h-8 flex items-center justify-center rounded-full border bg-background disabled:opacity-50"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
-
-      {/* Swiper Section */}
-      <Swiper slidesPerView={3} spaceBetween={20} className="mySwiper">
-        {items.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="card bg-white p-4 rounded-lg shadow-md">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={300}
-                height={300}
-                className="rounded-lg object-contain"
-              />
-              <h3 className="text-lg font-semibold mt-4">{item.title}</h3>
-              <p className="text-gray-600">{item.category}</p>
-              <p className="price text-gray-800 font-bold mt-2">{item.price}</p>
-            </div>
-          </SwiperSlide>
+      <div 
+        ref={scrollContainerRef}
+        onScroll={checkScroll}
+        className="flex gap-6 overflow-x-hidden scroll-smooth"
+      >
+        {products.map((product, index) => (
+          <ProductCardAirMax key={index} {...product} />
         ))}
-      </Swiper>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default AirMaxSection;
