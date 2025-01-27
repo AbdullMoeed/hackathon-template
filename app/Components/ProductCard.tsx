@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard: React.FC<{
@@ -11,10 +12,16 @@ const ProductCard: React.FC<{
   colors?: string[];
   inventory?: number;
 }> = ({ id, image, name, price, category, status }) => (
-  <Link href={`/products/${id}`}>
+  <Link href={`/product/${id}`}>
     <div className="block border rounded shadow-md p-4 cursor-pointer hover:shadow-lg transition">
-      <img src={image} alt={name} className="w-full h-48 object-cover rounded" />
-      <h2 className="text-lg font-semibold mt-2">{name}</h2>
+      <Image
+        src={image}
+        alt={name}
+        className="w-full h-48 object-cover rounded"
+        width={450}
+        height={450}
+      />
+      <h2 className="text-lg font-semibold mt-2 truncate">{name}</h2>
       <p className="text-gray-500">{category}</p>
       <p className="text-lg font-bold text-green-600 mt-2">{price}</p>
       {status && (
@@ -31,11 +38,6 @@ const ProductCard: React.FC<{
 );
 
 export default ProductCard;
-
-
-
-
-
 
 // import Link from "next/link";
 
@@ -54,15 +56,12 @@ export default ProductCard;
 //       <img src={image} alt={name} className="w-full h-48 object-cover rounded" />
 //       <h2 className="text-lg font-semibold">{name}</h2>
 //       <p className="text-lg font-bold text-green-600">{price}</p>
-      
+
 //     </div>
 //   </Link>
 // );
 
 // export default ProductCard;
-
-
-
 
 // import React from "react";
 // import Link from "next/link";
@@ -79,7 +78,7 @@ export default ProductCard;
 // const ProductCard: React.FC<ProductCardProps> = ({ image, name, category, price, tag }) => {
 //   return (
 //     <Link href="/ProductNavigate"><div className="border rounded-lg shadow-sm hover:shadow-md transition p-4">
-      
+
 //       <Image
 //         src={image}
 //         alt={name}
