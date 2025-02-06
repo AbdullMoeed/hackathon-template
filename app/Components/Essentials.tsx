@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // components/Essentials.js
 export default function Essentials() {
@@ -17,9 +18,9 @@ export default function Essentials() {
               width={100} 
               height={100}
             />
-            <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
+            <Link href="/Products"><button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
               Mens
-            </button>
+            </button></Link>
           </div>
           {/* Womens Section */}
           <div className="relative group">
@@ -30,9 +31,9 @@ export default function Essentials() {
               height={100}
               className="w-full h-auto rounded-md"
             />
-            <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
+           <Link href="/Products"> <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
               Womens
-            </button>
+            </button></Link>
           </div>
           {/* Kids Section */}
           <div className="relative group">
@@ -43,9 +44,9 @@ export default function Essentials() {
               height={100}
               className="w-full h-auto rounded-md"
             />
-            <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
+            <Link href="/Products"><button className="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium group-hover:bg-gray-800 group-hover:text-white transition">
               Kids
-            </button>
+            </button></Link>
           </div>
         </div>
         {/* Links Section */}

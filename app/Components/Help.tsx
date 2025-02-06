@@ -173,174 +173,175 @@ import Navbar from '../Navbar/Navbar'
 
 export default function HelpPage() {
   return (
-    < >
-    <Navbar />
-    <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-[1200px]">
-        <div className="px-12 py-8">
-          {/* Header */}
-          <h1 className="text-[22px] font-bold mb-6">GET HELP</h1>
-          
-          {/* Search Bar */}
-          <div className="relative mb-12">
-            <input
-              type="text"
-              placeholder="What can we help you with?"
-              className="w-full max-w-[600px] h-11 pl-4 pr-10 border border-gray-300 rounded text-[15px]"
-            />
-            <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-          </div>
-
-          {/* Main Content */}
-          <div className="flex gap-16">
-            {/* Left Column */}
-            <div className="flex-1">
-              {/* Payment Options Section */}
-              <section className="mb-12">
-                <h2 className="text-[16px] font-bold mb-4">WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?</h2>
-                <div className="space-y-4 text-[14px] leading-[1.5]">
-                  <p>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:</p>
-                  <p className="ml-4">Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</p>
-                  <p className="ml-4">If you enter your PAN information at checkout, you&apos;ll be able to pay for your order with PayTM or a local credit or debit card.</p>
-                  <p>Apple Pay</p>
-                  <p>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you&apos;re not already a Member, join us today.</p>
-                  <div className="flex gap-2 pt-2">
-                    <button className="bg-black text-white text-[15px] px-6 py-2 rounded-full hover:bg-gray-800">
-                      JOIN US
-                    </button>
-                    <button className="bg-black text-white text-[15px] px-6 py-2 rounded-full hover:bg-gray-800">
-                      SHOP NIKE
-                    </button>
-                  </div>
-                </div>
-              </section>
-
-              {/* FAQs Section */}
-              <section className="mb-12">
-                <h3 className="text-[14px] font-bold mb-6">FAQs</h3>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-[14px] font-bold mb-2">Does my card need international purchases enabled?</h4>
-                    <div className="space-y-2 text-[14px]">
-                      <p>Yes, we recommend asking your bank to enable international purchases on your card. You will be notified at checkout if international purchases need to be enabled.</p>
-                      <p>Please note, some banks may charge a small transaction fee for international orders.</p>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-[14px] font-bold mb-2">Can I pay for my order with multiple methods?</h4>
-                    <p className="text-[14px]">No, payment for Nike orders can&apos;t be split between multiple payment methods.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-[14px] font-bold mb-2">What payment method is accepted for SNKRS orders?</h4>
-                    <p className="text-[14px]">You can use any accepted credit card to pay for your SNKRS order.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-[14px] font-bold mb-2">Why don&apos;t I see Apple Pay as an option?</h4>
-                    <p className="text-[14px]">To see Apple Pay as an option in the Nike App or on Nike.com, you&apos;ll need to use a compatible Apple device running the latest OS, be signed in to your iCloud account and have a supported card in your Wallet. Additionally, you&apos;ll need to use Safari to use Apple Pay on Nike.com.</p>
-                  </div>
-                </div>
-              </section>
-
-              {/* Feedback Section */}
-              <section className="mb-8">
-                <p className="text-[14px] mb-3">Was this answer helpful?</p>
-                <div className="flex gap-2">
-                  <button className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded">
-                    👍
-                  </button>
-                  <button className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded">
-                    👎
-                  </button>
-                </div>
-              </section>
-
-              {/* Related Section */}
-              <section>
-                <h3 className="text-[14px] font-bold mb-4">RELATED</h3>
-                <div className="space-y-2">
-                  <Link href="#" className="block text-[14px] underline hover:no-underline">
-                    WHAT ARE NIKE&apos;S DELIVERY OPTIONS?
-                  </Link>
-                  <Link href="#" className="block text-[14px] underline hover:no-underline">
-                    HOW DO I GET FREE DELIVERY ON NIKE ORDERS?
-                  </Link>
-                </div>
-              </section>
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-white">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="px-12 py-8">
+            {/* Header */}
+            <h1 className="text-[22px] font-bold mb-6">GET HELP</h1>
+            
+            {/* Search Bar */}
+            <div className="relative mb-12">
+              <input
+                type="text"
+                placeholder="What can we help you with?"
+                className="w-full max-w-[600px] h-11 pl-4 pr-10 border border-gray-300 rounded text-[15px]"
+              />
+              <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             </div>
 
-            {/* Right Column - Contact Section */}
-            <div className="w-[300px] border-l border-gray-200 pl-8">
-              <h2 className="text-[24px] font-bold mb-8 flex flex-col items-center">CONTACT US</h2>
-              
-              <div className="space-y-12">
-                {/* Phone */}
-                <div className="text-center">
-                  <div className="mb-4">
-                    <Image 
-                      src="/Images/help-phone.png"
-                      alt="Phone"
-                      width={68}
-                      height={68}
-                      className="mx-auto"
-                    />
+            {/* Main Content */}
+            <div className="flex flex-col lg:flex-row gap-16">
+              {/* Left Column */}
+              <div className="flex-1">
+                {/* Payment Options Section */}
+                <section className="mb-12">
+                  <h2 className="text-[16px] font-bold mb-4">WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?</h2>
+                  <div className="space-y-4 text-[14px] leading-[1.5]">
+                    <p>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:</p>
+                    <p className="ml-4">Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</p>
+                    <p className="ml-4">If you enter your PAN information at checkout, you&apos;ll be able to pay for your order with PayTM or a local credit or debit card.</p>
+                    <p>Apple Pay</p>
+                    <p>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you&apos;re not already a Member, join us today.</p>
+                    <div className="flex gap-2 pt-2">
+                      <button className="bg-black text-white text-[15px] px-6 py-2 rounded-full hover:bg-gray-800">
+                        JOIN US
+                      </button>
+                      <button className="bg-black text-white text-[15px] px-6 py-2 rounded-full hover:bg-gray-800">
+                        SHOP NIKE
+                      </button>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[14px] font-bold">000 800 919 0595</p>
-                    <p className="text-[14px]">Products & Orders: 24 hours a day,</p>
-                    <p className="text-[14px]">7 days a week</p>
-                    <p className="text-[14px]">Company Info & Enquiries: 07:30 -</p>
-                    <p className="text-[14px]">16:30, Monday - Friday</p>
-                  </div>
-                </div>
+                </section>
 
-                {/* Chat */}
-                <div className="text-center">
-                  <div className="mb-4">
-                    <Image 
-                      src="/Images/message-help.png"
-                      alt="Chat"
-                      width={68}
-                      height={68}
-                      className="mx-auto"
-                    />
+                {/* FAQs Section */}
+                <section className="mb-12">
+                  <h3 className="text-[14px] font-bold mb-6">FAQs</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-[14px] font-bold mb-2">Does my card need international purchases enabled?</h4>
+                      <div className="space-y-2 text-[14px]">
+                        <p>Yes, we recommend asking your bank to enable international purchases on your card. You will be notified at checkout if international purchases need to be enabled.</p>
+                        <p>Please note, some banks may charge a small transaction fee for international orders.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-[14px] font-bold mb-2">Can I pay for my order with multiple methods?</h4>
+                      <p className="text-[14px]">No, payment for Nike orders can&apos;t be split between multiple payment methods.</p>
+                    </div>
+                    <div>
+                      <h4 className="text-[14px] font-bold mb-2">What payment method is accepted for SNKRS orders?</h4>
+                      <p className="text-[14px]">You can use any accepted credit card to pay for your SNKRS order.</p>
+                    </div>
+                    <div>
+                      <h4 className="text-[14px] font-bold mb-2">Why don&apos;t I see Apple Pay as an option?</h4>
+                      <p className="text-[14px]">To see Apple Pay as an option in the Nike App or on Nike.com, you&apos;ll need to use a compatible Apple device running the latest OS, be signed in to your iCloud account and have a supported card in your Wallet. Additionally, you&apos;ll need to use Safari to use Apple Pay on Nike.com.</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[14px]">24 hours a day</p>
-                    <p className="text-[14px]">7 days a week</p>
-                  </div>
-                </div>
+                </section>
 
-                {/* Email */}
-                <div className="text-center">
-                  <div className="mb-4">
-                    <Image 
-                      src="/Images/mail-help.png"
-                      alt="Email"
-                      width={68}
-                      height={68}
-                      className="mx-auto"
-                    />
+                {/* Feedback Section */}
+                <section className="mb-8">
+                  <p className="text-[14px] mb-3">Was this answer helpful?</p>
+                  <div className="flex gap-2">
+                    <button className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded">
+                      👍
+                    </button>
+                    <button className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded">
+                      👎
+                    </button>
                   </div>
-                  <div>
-                    <p className="text-[14px]">We&apos;ll reply within</p>
-                    <p className="text-[14px]">five business days</p>
-                  </div>
-                </div>
+                </section>
 
-                {/* Store Locator */}
-                <div className="text-center">
-                  <div className="mb-4">
-                    <Image 
-                      src="/Images/location-help.png"
-                      alt="Store Locator"
-                      width={68}
-                      height={68}
-                      className="mx-auto"
-                    />
+                {/* Related Section */}
+                <section>
+                  <h3 className="text-[14px] font-bold mb-4">RELATED</h3>
+                  <div className="space-y-2">
+                    <Link href="#" className="block text-[14px] underline hover:no-underline">
+                      WHAT ARE NIKE&apos;S DELIVERY OPTIONS?
+                    </Link>
+                    <Link href="#" className="block text-[14px] underline hover:no-underline">
+                      HOW DO I GET FREE DELIVERY ON NIKE ORDERS?
+                    </Link>
                   </div>
-                  <div>
-                    <p className="text-[14px] font-bold">STORE LOCATOR</p>
-                    <p className="text-[14px]">Find Nike retail stores near you</p>
+                </section>
+              </div>
+
+              {/* Right Column - Contact Section */}
+              <div className="w-[300px] border-l border-gray-200 pl-8 mt-12 lg:mt-0">
+                <h2 className="text-[24px] font-bold mb-8 flex flex-col items-center">CONTACT US</h2>
+                
+                <div className="space-y-12">
+                  {/* Phone */}
+                  <div className="text-center">
+                    <div className="mb-4">
+                      <Image 
+                        src="/Images/help-phone.png"
+                        alt="Phone"
+                        width={68}
+                        height={68}
+                        className="mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-[14px] font-bold">000 800 919 0595</p>
+                      <p className="text-[14px]">Products & Orders: 24 hours a day,</p>
+                      <p className="text-[14px]">7 days a week</p>
+                      <p className="text-[14px]">Company Info & Enquiries: 07:30 -</p>
+                      <p className="text-[14px]">16:30, Monday - Friday</p>
+                    </div>
+                  </div>
+
+                  {/* Chat */}
+                  <div className="text-center">
+                    <div className="mb-4">
+                      <Image 
+                        src="/Images/message-help.png"
+                        alt="Chat"
+                        width={68}
+                        height={68}
+                        className="mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-[14px]">24 hours a day</p>
+                      <p className="text-[14px]">7 days a week</p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="text-center">
+                    <div className="mb-4">
+                      <Image 
+                        src="/Images/mail-help.png"
+                        alt="Email"
+                        width={68}
+                        height={68}
+                        className="mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-[14px]">We&apos;ll reply within</p>
+                      <p className="text-[14px]">five business days</p>
+                    </div>
+                  </div>
+
+                  {/* Store Locator */}
+                  <div className="text-center">
+                    <div className="mb-4">
+                      <Image 
+                        src="/Images/location-help.png"
+                        alt="Store Locator"
+                        width={68}
+                        height={68}
+                        className="mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-[14px] font-bold">STORE LOCATOR</p>
+                      <p className="text-[14px]">Find Nike retail stores near you</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -348,8 +349,8 @@ export default function HelpPage() {
           </div>
         </div>
       </div>
-    </div>
     </>
   )
 }
+
 
