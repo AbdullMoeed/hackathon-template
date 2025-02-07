@@ -471,22 +471,22 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/men" className="hover:underline">
+            <Link href="/Products" className="hover:underline">
               Men
             </Link>
           </li>
           <li>
-            <Link href="/women" className="hover:underline">
+            <Link href="/Products" className="hover:underline">
               Women
             </Link>
           </li>
           <li>
-            <Link href="/kids" className="hover:underline">
+            <Link href="/Products" className="hover:underline">
               Kids
             </Link>
           </li>
           <li>
-            <Link href="/sale" className="hover:underline">
+            <Link href="/Products" className="hover:underline">
               Sale
             </Link>
           </li>
@@ -584,22 +584,22 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/men" className="block text-sm hover:underline">
+              <Link href="/Products" className="block text-sm hover:underline">
                 Men
               </Link>
             </li>
             <li>
-              <Link href="/women" className="block text-sm hover:underline">
+              <Link href="/Products" className="block text-sm hover:underline">
                 Women
               </Link>
             </li>
             <li>
-              <Link href="/kids" className="block text-sm hover:underline">
+              <Link href="/Products" className="block text-sm hover:underline">
                 Kids
               </Link>
             </li>
             <li>
-              <Link href="/sale" className="block text-sm hover:underline">
+              <Link href="/Products" className="block text-sm hover:underline">
                 Sale
               </Link>
             </li>
